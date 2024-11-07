@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "korppujauho",
+  "version": "${version}",
+  "name": "korppujauho",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "dev.mlml.korppujauho.Korppujauho"
+    ]
+  },
+  "mixins": [
+    "korppujauho.mixins.json",
+    {
+      "config": "korppujauho.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
